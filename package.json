@@ -1,0 +1,26 @@
+{
+  "name": "angular-webpack-typescript-karma-coverage",
+  "version": "1.0.0",
+  "description": "An exemplary project using Angular 1.x, Webpack, TypeScript and Karma (with Coverage).",
+  "main": "index.js",
+  "scripts": {
+    "test": "karma start"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/zbicin/angular-webpack-typescript-karma-coverage.git"
+  },
+  "keywords": [
+    "angular",
+    "webpack",
+    "typescript",
+    "karma",
+    "coverage"
+  ],
+  "author": "Krzysztof Zbiciński <k.zbicinski@gmail.com>",
+  "license": "WTFPL",
+  "bugs": {
+    "url": "https://github.com/zbicin/angular-webpack-typescript-karma-coverage/issues"
+  },
+  "homepage": "https://github.com/zbicin/angular-webpack-typescript-karma-coverage#readme"
+}

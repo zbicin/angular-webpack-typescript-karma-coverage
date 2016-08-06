@@ -1,6 +1,11 @@
 var webpackKarmaConfig = require('./webpack.config.karma.js');
 
-module.exports = function(config) {
+function normalizedSubdir(browser) {
+  // normalization process to keep a consistent browser name across different OS
+  return browser.toLowerCase().split(/[ /-]/)[0];
+}
+
+module.exports = function (config) {
   config.set({
 
     // base path that will be used to resolve all patterns (eg. files, exclude)
@@ -9,7 +14,7 @@ module.exports = function(config) {
 
     // frameworks to use
     // available frameworks: https://npmjs.org/browse/keyword/karma-adapter
-    frameworks: ['jasmine'],
+    frameworks: ['jasmine', 'source-map-support'],
 
 
     // list of files / patterns to load in the browser
@@ -36,7 +41,7 @@ module.exports = function(config) {
     // test results reporter to use
     // possible values: 'dots', 'progress'
     // available reporters: https://npmjs.org/browse/keyword/karma-reporter
-    reporters: ['progress'],
+    reporters: ['progress', 'coverage'],
 
 
     // web server port
@@ -69,6 +74,22 @@ module.exports = function(config) {
     // how many browser should be started simultaneous
     concurrency: Infinity,
 
-    webpack: webpackKarmaConfig
+    webpack: webpackKarmaConfig,
+
+    // optionally, configure the reporter
+    coverageReporter: {
+      reporters: [
+        {
+          type: 'html',
+          dir: 'coverage/html-js',
+          subdir: normalizedSubdir
+        },
+        {
+          type: 'json',
+          dir: 'coverage/json',
+          subdir: normalizedSubdir
+        }
+      ]
+    }
   })
 }

@@ -1,4 +1,2 @@
 require('../transformer/index.ts');
-namespace App {
-    angular.module('app', ['transformer']);
-}
+angular.module('app', ['app.transformer']);

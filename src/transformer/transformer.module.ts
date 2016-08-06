@@ -1,3 +1,1 @@
-namespace Transformer {
-    angular.module('transformer', []);
-}
+angular.module('app.transformer', []);

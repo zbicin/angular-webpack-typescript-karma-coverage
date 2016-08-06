@@ -1,11 +1,17 @@
-namespace Transformer {
-    describe('transformer', () => {
-        it('should transform to upper case correctly', () => {
-            let transformer = new Transformer();
+describe('transformer', () => {
+    let factory;
 
-            let result = transformer.toUpperCase('foo');
+    beforeEach(() => {
+        angular.mock.module('app.transformer');
 
-            expect(result).toEqual('FOO');
+        angular.mock.inject((transformer) => {
+            factory = transformer;
         });
     });
-}
+
+    it('should transform to upper case correctly', () => {
+        let result = factory.toUpperCase('foo');
+
+        expect(result).toEqual('FOO');
+    });
+});

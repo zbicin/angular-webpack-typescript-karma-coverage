@@ -20,10 +20,10 @@
                         <input type="text" id="input" ng-model="vm.input" class="form-control" placeholder="Input some chars">
                     </div>
                     <div class="radio">
-                        <label><input type="radio" name="method" value="toLowerCase" checked> toLowerCase()</label>
+                        <label><input type="radio" name="method" ng-model="vm.method" value="toLowerCase" checked> toLowerCase()</label>
                     </div>
                     <div class="radio">
-                        <label><input type="radio" name="method" value="toUpperCase"> toUpperCase()</label>
+                        <label><input type="radio" name="method" ng-model="vm.method" value="toUpperCase"> toUpperCase()</label>
                     </div>
                     <button type="submit" class="btn btn-default">Transform</button>
                     <p class="help-block" ng-if="vm.result">Result: {{ vm.result }}.</p>

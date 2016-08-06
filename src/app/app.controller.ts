@@ -7,6 +7,7 @@ export class AppController {
 
     public constructor(private transformer: Transformer.ITransformerService) {
         this.method = 'toLowerCase';
+        this.input = 'Input some chars';
     }
 
     public transform() {

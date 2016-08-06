@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "An exemplary project using Angular 1.x, Webpack, TypeScript and Karma (with Coverage).",
   "scripts": {
-    "start": "webpack && http-server -o",
+    "start": "http-server -o",
     "test": "npm run karma && npm run ts-coverage-remap",
     "karma": "karma start",
     "ts-coverage-remap": "remap-istanbul -i coverage/json/coverage-final.json -o coverage/html-ts -t html"
@@ -26,12 +26,14 @@
   },
   "homepage": "https://github.com/zbicin/angular-webpack-typescript-karma-coverage#readme",
   "dependencies": {
+    "http-server": "^0.9.0"
+  },
+  "devDependencies": {
     "angular": "^1.5.8",
     "angular-mocks": "^1.5.8",
     "bootstrap": "^3.3.7",
     "css-loader": "^0.23.1",
     "file-loader": "^0.9.0",
-    "http-server": "^0.9.0",
     "istanbul-instrumenter-loader": "^0.2.0",
     "jasmine": "^2.4.1",
     "karma": "^1.1.2",
@@ -47,5 +49,6 @@
     "typings": "^1.3.2",
     "url-loader": "^0.5.7",
     "webpack": "^1.13.1"
+    
   }
 }

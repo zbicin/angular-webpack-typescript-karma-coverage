@@ -4,10 +4,9 @@
 <head>
     <meta charset="UTF-8">
     <title>An exemplary project using Angular 1.x, Webpack, TypeScript and Karma (with Coverage)</title>
-    <link rel="stylesheet" href="./node_modules/bootstrap/dist/css/bootstrap.css">
 </head>
 
-<body style="padding-top: 40px">
+<body style="padding-top: 40px" ng-app="app" ng-controller="AppController as vm">
     <div class="container">
         <h1>angular-webpack-typescript-karma-coverage</h1>
         <h4>An exemplary project using Angular 1.x, Webpack, TypeScript and Karma (with Coverage)</h4>
@@ -16,17 +15,18 @@
 
         <div class="row">
             <div class="col-md-3">
-                <form ng-submit="vm.hash()" role="form">
+                <form ng-submit="vm.transform()" role="form">
                     <div class="form-group">
                         <input type="text" id="input" ng-model="vm.input" class="form-control" placeholder="Input some chars">
                     </div>
                     <div class="radio">
-                        <label><input type="radio" name="method" value="sha1" checked> SHA1</label>
+                        <label><input type="radio" name="method" value="toLowerCase" checked> toLowerCase()</label>
                     </div>
                     <div class="radio">
-                        <label><input type="radio" name="method" value="md5"> MD5</label>
+                        <label><input type="radio" name="method" value="toUpperCase"> toUpperCase()</label>
                     </div>
-                    <button type="submit" class="btn btn-default">Hash</button>
+                    <button type="submit" class="btn btn-default">Transform</button>
+                    <p class="help-block" ng-if="vm.result">Result: {{ vm.result }}.</p>
                 </form>
             </div>
         </div>
@@ -37,6 +37,8 @@
             <a href="https://github.com/zbicin/angular-webpack-typescript-karma-coverage">View on GitHub</a>
         </p>
     </div>
+
+    <script src="bundle.js"></script>
 </body>
 
 </html>

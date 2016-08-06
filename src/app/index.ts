@@ -1,2 +1,2 @@
-require('./app.module.ts');
-require('./app.controller.ts');
+import './app.module.ts';
+export * from './app.controller.ts';

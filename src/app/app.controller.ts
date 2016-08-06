@@ -1,6 +1,6 @@
-import * as Transformer from '../transformer/transformer.factory.ts';
+import * as Transformer from '../transformer';
 
-class AppController {
+export class AppController {
     private input: string;
     private method: string;
     private result: string;

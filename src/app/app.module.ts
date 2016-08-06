@@ -1,2 +1,3 @@
-require('../transformer/index.ts');
+import {} from '../transformer';
+
 angular.module('app', ['app.transformer']);

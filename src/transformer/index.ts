@@ -1,2 +1,2 @@
-require('./transformer.module.ts');
-require('./transformer.factory.ts');
+import './transformer.module.ts';
+export * from './transformer.factory.ts';

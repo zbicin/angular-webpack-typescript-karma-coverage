@@ -22,5 +22,14 @@
   "bugs": {
     "url": "https://github.com/zbicin/angular-webpack-typescript-karma-coverage/issues"
   },
-  "homepage": "https://github.com/zbicin/angular-webpack-typescript-karma-coverage#readme"
+  "homepage": "https://github.com/zbicin/angular-webpack-typescript-karma-coverage#readme",
+  "dependencies": {
+    "angular": "^1.5.8",
+    "bootstrap": "^3.3.7",
+    "karma": "^1.1.2",
+    "karma-coverage": "^1.1.1",
+    "typescript": "^1.8.10",
+    "typings": "^1.3.2",
+    "webpack": "^1.13.1"
+  }
 }

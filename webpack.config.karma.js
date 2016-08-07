@@ -1,5 +1,4 @@
 var webpackConfig = require('./webpack.config.js');
-var path = require('path');
 
 webpackConfig.entry = {};
 webpackConfig.module.postLoaders = [

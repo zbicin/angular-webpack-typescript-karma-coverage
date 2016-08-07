@@ -1,6 +1,8 @@
 # angular-webpack-typescript-karma-coverage
 An exemplary project using Angular 1.x, Webpack, TypeScript and Karma (with Coverage).
 
+![Code coverage report using TypeScript files as the analyzed source](https://raw.githubusercontent.com/zbicin/angular-webpack-typescript-karma-coverage/master/coverage.png)
+
 ## How to run?
 0. `npm install -g typings` (if you don't have it installed globally yet).
 1. Clone the repository (i.e. `git clone https://github.com/zbicin/angular-webpack-typescript-karma-coverage.git && cd angular-webpack-typescript-karma-coverage`).
